@@ -1,0 +1,98 @@
+/* imported google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/* theis style overides everything style */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #222;
+}
+
+/* style font fonts */
+li, a, button{
+    font-family: "Montserrat", sans-serif; /*fonts that was imported from google  */
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+/* this targets the header */
+header{
+     display: flex; /*makes the items in the header align on the same line */
+     justify-content: space-between; /*pushes the left and the right items to the far edges and the item in the middle will evenly space between those left and right items*/
+     align-items: center; /*centers all the items in the header */
+     padding: 30px 10%; /*30px top and bottome and 10% left and right*/
+     background-color: #243;
+}
+
+/* logo styling */
+.logo{
+    cursor: pointer; /*becomes a cursor when hovered at*/
+    order: 3; /* logo class becomes the third in order from left to right*/
+    margin-left: auto; /*pushes the logo to the far right*/
+}
+
+/*the display flex is set to the header And NAV, IMG, A tags are all children of it. That what we needed to target when chaning the order*/
+nav{
+    order: 1; /* nav tag becomes the first in order from left to right*/
+}
+
+/*adds opacity to the logo*/
+.logo:hover{
+    opacity: 0.8;
+}
+
+/*image resizing*/
+img{
+    width: auto;
+    height: auto;
+    max-width: 220px;
+    max-height: 100px;
+}
+
+/* nav links */
+.nav__links{
+    list-style: none; /* none removes the pointers*/
+}
+
+/* nav links that targets each list li items individually  */
+.nav__links li {
+    display: inline-block; /*so we can manipulate the margins and padding of the inline element/tag side by side or on the same line*/
+    padding: 0px 20px; /*this adds 0px top and bottom of the a tag and 20px left and right of the a tag*/
+}
+
+/* nav links that targets each list li items individually  and also the a as well */
+.nav__links li a{
+    transition: all 0.3s ease 0s; /*transition for all a tags that's 0.3 seconds with ease on so that it's nice and smooth, 0s of delay (meansnodelay)*/
+}
+
+/* Hover for nav links that targets each list li items individually  and also the a as well*/
+.nav__links li a:hover{
+    color: #0088a9;
+}
+
+/*changing cta order*/
+.cta{
+    order: 2; /* cta button class becomes the second in order from left to right*/
+}
+
+/* button style */
+button{
+    margin-left: 20px;
+    padding: 9px 25px; /*9px top and bottom, 25px right and left */
+    background-color: rgba(0,136,169,1); /*the reason for rgba is when we apply hover we will reduce the opacity which is 1 for the alpha value presently rgb(a)*/
+    border: none;
+    border-radius: 50px; /*corners around the button*/
+    cursor: pointer;
+    transform: all 0.3s ease 0s; /*transition for all a tags that's 0.3 seconds with ease on so that it's nice and smooth, 0s of delay (meansnodelay)*/
+}
+
+/* Hover for button */
+button:hover{
+    background-color: rgba(0,136,169,0.7); /*0.7 alpha value*/
+}
